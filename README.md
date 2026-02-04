@@ -52,6 +52,14 @@ Pkg.build("IJulia")
 
 ```
 
+If you want an environment with multiple threads, you can specify that with
+
+```julia
+using IJulia
+# This creates a new kernel option in your Jupyter dropdown named "Julia 1.10 (4 threads)"
+IJulia.installkernel("Julia 4-threads", env=Dict("JULIA_NUM_THREADS" => "4"))
+```
+
 ### 3. Environment Setup & Dependency Installation
 
 This tutorial uses a dedicated Julia environment to ensure version compatibility. Navigate to this project folder in your terminal and launch Julia using the local project flag:
